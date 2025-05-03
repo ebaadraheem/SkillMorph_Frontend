@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0; /* Remove default margin */
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ensure main content stretches to fill space */
+}
+.material-icons {
+  font-family: "Material Icons";
+}
+.flexer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* Global Scrollbar Styles */
+@layer utilities {
+  /* Global Scrollbar Styles */
+  html {
+    scrollbar-width: thin; /* Firefox: Thin scrollbar */
+    scrollbar-color: #111827 #f9fafb; /* Dark Gray thumb, Light Gray track */
+  }
+
+  html::-webkit-scrollbar {
+    width: 12px; /* Set scrollbar width */
+    background-color: #f9fafb; /* Track background */
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      #111827,
+      #10b981
+    ); /* Dark Gray to Green gradient thumb */
+    border-radius: 6px; /* Rounded corners for smooth visuals */
+    border: 2px solid #f9fafb; /* Padding effect for thumb */
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      #111827,
+      #6ee7b7
+    ); /* Lighter Green (#6EE7B7) on hover */
+  }
+
+  html::-webkit-scrollbar-track {
+    background-color: #f9fafb; /* Light Gray track */
+  }
+}
