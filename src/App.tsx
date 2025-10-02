@@ -21,6 +21,7 @@ function App() {
       authenticateUser(token);
     } 
   }, []);
+  
 
   
   return (
